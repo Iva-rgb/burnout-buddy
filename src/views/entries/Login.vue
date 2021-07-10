@@ -13,6 +13,7 @@
                 <vInput
                     :label="'Password'"
                     :required="true"
+                    :type="'password'"
                 ></vInput>
             </div>
             <p>or</p>
@@ -37,7 +38,7 @@
         methods: {
             login() {
                 console.log('login');
-            }
+            },
         },
         mounted () {
         },
@@ -55,6 +56,16 @@
     width: 100%;
     font-weight: bold;
     /* color: black; */
+}
+.password-input{
+    position: relative;
+}
+.fa-eye{
+    position: relative;
+    bottom: 30px;
+    left: 268px;
+    cursor: pointer;
+    color: grey;
 }
 .icon{
     transform: scale(1.5, 1.5)
