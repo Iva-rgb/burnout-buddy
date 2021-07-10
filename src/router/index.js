@@ -1,26 +1,80 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Entry from '../layouts/Entry.vue'
+import Features from '../layouts/Features.vue'
+import HomePage from '../layouts/HomePage.vue'
+import Login from '../views/entries/Login.vue'
+import Dashboard from '../views/homepage/Dashboard.vue'
+import Messaging from '../views/features/Messaging.vue'
+import PodcastAndMusic from '../views/features/PodcastAndMusic.vue'
+import Pomodoro from '../views/features/Pomodoro.vue'
+import Profile from '../views/features/Profile.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    alias: '/login',
+    component: Entry,
+    children: [
+      {
+        path: '',
+        component: Login,
+      },
+    ],
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/register',
+    component: Entry,
+    children: [
+      {
+        path: '',
+        component: () => import('../views/entries/Register.vue')
+      },
+    ],
+  },
+  {
+    path: '/home',
+    component: HomePage,
+    children: [
+      {
+        name: 'Dashboard',
+        path: '',
+        component: Dashboard,
+      },
+    ],
+  },
+  {
+    path: '/features',
+    component: Features,
+    children: [
+      {
+        name: 'PodcastAndMusic',
+        path: 'player',
+        component: PodcastAndMusic,
+      },
+      {
+        name: 'Messaging',
+        path: 'messaging',
+        component: Messaging,
+      },
+      {
+        name: 'Pomodoro',
+        path: 'pomodoro',
+        component: Pomodoro,
+      },
+      {
+        name: 'Profile',
+        path: 'profile',
+        component: Profile,
+      },
+    ],
   }
 ]
 
 const router = new VueRouter({
+  mode: "history",
   routes
 })
 
