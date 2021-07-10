@@ -9,24 +9,24 @@
                     :placeholder="'e.g. Andrew Miller'"
                 ></vInput>
             </div>
-            <div class="pb-3 flex-item">
+            <div class="pb-4 flex-item">
                 <vInput
                     :label="'Password'"
                     :required="true"
                     :type="'password'"
                 ></vInput>
             </div>
+            <div class="flex-item pb-2">
+                <button type="submit" class="btn btn-primary mb-2 login-btn">LOGIN</button>
+            </div>
             <p>or</p>
-            <div class="d-flex justify-content-around align-items-center flex-wrap flex-row flex-item pb-4">
+            <div class="d-flex justify-content-around align-items-center flex-wrap flex-row flex-item">
                 <i class="fab fa-facebook-square icon"></i>
                 <i class="fab fa-google icon"></i>
                 <i class="fab fa-twitter icon"></i>
             </div>
-            <div class="flex-item">
-                <button type="submit" class="btn btn-primary mb-2 login-btn">LOGIN</button>
-            </div>
         </form>
-        <div id="link-to-register" class="d-flex justify-content-center align-items-center flex-wrap flex-column mt-4">
+        <div id="link-to-register" class="d-flex justify-content-center align-items-center flex-wrap flex-column mt-5">
             <h5 class="flex-item">Don't have an account? <button @click="$goToRoute('Register')" class="sign-up-btn">Sign up</button></h5>
         </div>
     </div>
