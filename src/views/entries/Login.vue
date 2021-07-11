@@ -1,20 +1,28 @@
 <template>
     <div>
-        <form @submit.prevent="login" id="login-form" class="d-flex justify-content-center align-items-center flex-wrap flex-column">
+        <ValidationObserver v-slot="{ handleSubmit }">
+        <form @submit.prevent="handleSubmit(login)" id="login-form" class="d-flex justify-content-center align-items-center flex-wrap flex-column">
             <h4 class="flex-item pb-3">Log in with: </h4>
             <div class="pb-3 flex-item">
-                <vInput
-                    :label="'Username'"
-                    :required="true"
-                    :placeholder="'e.g. Andrew Miller'"
-                ></vInput>
+                <ValidationProvider name="username" rules="required" v-slot="{ errors }">
+                    <vInput
+                        :label="'Username'"
+                        v-model="username"
+                        :required="true"
+                        :placeholder="'e.g. Andrew Miller'"
+                    ></vInput>
+                    <span class="error-message">{{ errors[0] }}</span>
+                </ValidationProvider>
             </div>
             <div class="pb-4 flex-item">
-                <vInput
-                    :label="'Password'"
-                    :required="true"
-                    :type="'password'"
-                ></vInput>
+                <ValidationProvider name="password" rules="required" v-slot="{ errors }">
+                    <vInput
+                        :label="'Password'"
+                        :required="true"
+                        :type="'password'"
+                    ></vInput>
+                    <span class="error-message">{{ errors[0] }}</span>
+                </ValidationProvider>
             </div>
             <div class="flex-item pb-2">
                 <button type="submit" class="btn btn-primary mb-2 login-btn">LOGIN</button>
@@ -26,6 +34,7 @@
                 <i class="fab fa-twitter icon"></i>
             </div>
         </form>
+        </ValidationObserver>
         <div id="link-to-register" class="d-flex justify-content-center align-items-center flex-wrap flex-column mt-5">
             <h5 class="flex-item">Don't have an account? <button @click="$goToRoute('Register')" class="sign-up-btn">Sign up</button></h5>
         </div>
@@ -35,6 +44,11 @@
 <script>
     export default {
         name: 'Login',
+        data() {
+            return {
+                username: ''
+            }
+        },
         methods: {
             login() {
                 console.log('login');

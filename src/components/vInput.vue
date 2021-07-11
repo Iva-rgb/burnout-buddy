@@ -62,10 +62,6 @@ export default {
   text-align: left;
   display: inline-block;
 }
-.input-wrapper .required-indicator{
-  margin-left: 4px;
-  color: #C04C44;
-}
 .input-wrapper input {
   box-sizing: border-box;
   width: 100%;
