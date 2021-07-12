@@ -18,6 +18,7 @@
                 <ValidationProvider name="password" rules="required" v-slot="{ errors }">
                     <vInput
                         :label="'Password'"
+                        v-model="password"
                         :required="true"
                         :type="'password'"
                     ></vInput>
@@ -46,7 +47,8 @@
         name: 'Login',
         data() {
             return {
-                username: ''
+                username: '',
+                password: ''
             }
         },
         methods: {
@@ -99,5 +101,13 @@
     text-decoration: underline;
     color: #4285f4;
 }
-
+@media only screen and (max-width: 375px)  {
+    #login-form .flex-item,
+    #link-to-register .flex-item{
+        min-width: 100%;
+    }
+    #link-to-register h5{
+        font-size: 1.1em;
+    }
+}
 </style>

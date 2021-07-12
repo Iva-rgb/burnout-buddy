@@ -19,6 +19,7 @@ const routes = [
     component: Entry,
     children: [
       {
+        name: 'Login',
         path: '',
         component: Login,
       },

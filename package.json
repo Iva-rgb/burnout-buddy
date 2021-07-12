@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "concurrently \"vue-cli-service serve \" \"json-server --watch db.json\"",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -13,11 +13,14 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "concurrently": "^6.2.0",
     "core-js": "^3.6.5",
     "vee-validate": "^3.4.10",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vue-toast-notification": "^0.6.2",
     "vuex": "^3.4.0"
   },
   "devDependencies": {

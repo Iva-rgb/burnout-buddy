@@ -4,13 +4,16 @@ import router from './router'
 import store from './store'
 import mixins from './plugins/mixins.js'
 import './assets/css/main.css';
+import Axios from 'axios'
 
 // Bootstrap
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Components
-import vInput from './components/vInput.vue'
+import vInput from './components/vInput.vue';
+import VueToast from 'vue-toast-notification';
+import 'vue-toast-notification/dist/theme-sugar.css';
 import { ValidationProvider, ValidationObserver, extend, localize } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
 import en from 'vee-validate/dist/locale/en.json';
@@ -19,7 +22,8 @@ import en from 'vee-validate/dist/locale/en.json';
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+Vue.prototype.$http = Axios;
 
 Object.keys(rules).forEach(rule => {
   extend(rule, rules[rule]);
@@ -36,6 +40,11 @@ Object.entries(components).forEach(([name, component]) => {
 });
 
 Vue.mixin(mixins); 
+Vue.use(VueToast, {
+  // One of the options
+  duration: 3000,
+  position: 'top-right'
+})
 
 new Vue({
   router,

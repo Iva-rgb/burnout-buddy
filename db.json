@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "username": "Sarah",
+      "email": "sarahconor@gmail.com",
+      "password": "terminator",
+      "group": {},
+      "memberships": null,
+      "id": 1626123446020
+    }
+  ]
+}
