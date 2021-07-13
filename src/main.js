@@ -33,7 +33,7 @@ localize('en', en);
 const components = {
   vInput,
   ValidationProvider,
-  ValidationObserver
+  ValidationObserver,
 };
 Object.entries(components).forEach(([name, component]) => {
   Vue.component(name, component)
@@ -45,6 +45,7 @@ Vue.use(VueToast, {
   duration: 3000,
   position: 'top-right'
 })
+// Vue.use(VueSidebarMenu)
 
 new Vue({
   router,
