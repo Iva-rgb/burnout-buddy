@@ -53,7 +53,7 @@ const routes = [
     children: [
       {
         name: 'PodcastAndMusic',
-        path: 'player',
+        path: 'list',
         component: PodcastAndMusic,
       },
       {

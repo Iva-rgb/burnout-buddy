@@ -1,7 +1,7 @@
 <template>
     <div>
-        <button id="nav-button"  :style="{ 'background-image': 'linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('+require('../assets/'+image)+')'}">
-            <span>Hello</span>
+        <button id="nav-button"  :style="{ 'background-image': 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('+require('../assets/'+buttonDetails.image)+')'}">
+            <span class="btn-title">{{buttonDetails.name}}</span>
             <p class="vertical-line"></p>
             <i class="fas fa-chevron-right"></i>
             </button>
@@ -11,13 +11,12 @@
 <script>
     export default {
         props: {
-            image: String,
+            buttonDetails: Object,
         },
         name: 'vNavigationButton',
         methods: {
         },
     }
-        // url ('/image/btn.png')
 </script>
 
 <style>
@@ -36,9 +35,15 @@
 	padding: 1em;
 	text-align: center;
 }
+#nav-button .btn-title{
+    position: relative;
+    font-size: 2em;
+    right: 25px;
+    top: 5px;
+}
 .vertical-line{
     position: relative;
-    bottom: 40px;
+    bottom: 64px;
     right: 50px;
     border-right: 4px solid white;
     height: 90px;
@@ -46,7 +51,7 @@
 }
 #nav-button .fa-chevron-right{
     position: relative;
-    bottom: 94px;
+    bottom: 118px;
     right: 12px;
     color: white;
     transform: scale(2.5, 2.5);

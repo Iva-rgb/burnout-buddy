@@ -56,7 +56,7 @@
   height: 100%;
   width: 300px;
   color: #fff;
-  background: #b7b7a4;
+  background: #ade194;
   transition: all ease 0.4s;
 }
 
@@ -117,7 +117,7 @@
     border-color: white;
     font-weight: bold;
     font-size: 1.4em;
-    color: #b7b7a4;
+    color: #ade194;
 }
 
 .site-menu a,

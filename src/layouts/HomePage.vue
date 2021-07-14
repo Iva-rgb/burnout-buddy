@@ -30,8 +30,7 @@ import SidebarMenu from "../components/vSidebarMenu.vue";
   align-items: center;
   justify-content: center;
   height: 100vh;
-  padding: 40px;
-  padding-left: 104px;
+  padding: 0;
   transition: padding-left 0.4s ease;
 }
 #hompage-content.open {
