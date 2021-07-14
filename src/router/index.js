@@ -9,6 +9,7 @@ import Messaging from '../views/features/Messaging.vue'
 import PodcastAndMusic from '../views/features/PodcastAndMusic.vue'
 import Pomodoro from '../views/features/Pomodoro.vue'
 import Profile from '../views/features/Profile.vue'
+import AudioPlayer from '../views/features/AudioPlayer.vue'
 
 Vue.use(VueRouter)
 
@@ -72,7 +73,12 @@ const routes = [
         component: Profile,
       },
     ],
-  }
+  },
+  {
+    name: 'AudioPlayer',
+    path: '/player',
+    component: AudioPlayer,
+  },
 ]
 
 const router = new VueRouter({

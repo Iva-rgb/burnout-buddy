@@ -17,6 +17,7 @@ import 'vue-toast-notification/dist/theme-sugar.css';
 import { ValidationProvider, ValidationObserver, extend, localize } from 'vee-validate';
 import * as rules from 'vee-validate/dist/rules';
 import en from 'vee-validate/dist/locale/en.json';
+import WAudioplayerVue from 'w-audioplayer-vue'
 
 // Font awesome
 import '@fortawesome/fontawesome-free/css/all.css'
@@ -34,6 +35,7 @@ const components = {
   vInput,
   ValidationProvider,
   ValidationObserver,
+  WAudioplayerVue,
 };
 Object.entries(components).forEach(([name, component]) => {
   Vue.component(name, component)

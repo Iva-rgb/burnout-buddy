@@ -22,9 +22,9 @@
     left: 32px;
     color: #023047;
     cursor: pointer;
-    transform: scale(3, 3);
+    transform: scale(2.5, 2.5);
 }
 #features-container .features-wrapper{
-    margin-top: 64px;
+    margin-top: 120px;
 }
 </style>

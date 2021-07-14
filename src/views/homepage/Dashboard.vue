@@ -10,6 +10,7 @@
 
 <script>
 import vNavigationButton from "../../components/vNavigationButton.vue"
+import { mapActions } from 'vuex'
     export default {
         name: 'Dashboard',
         data() {
@@ -21,10 +22,13 @@ import vNavigationButton from "../../components/vNavigationButton.vue"
             vNavigationButton,
         },
         methods: {
+            ...mapActions({
+                setChosenFeature: 'setChosenFeature'
+            }),
             featureClicked(item) {
                 switch(item.name){
-                    case 'Podcast': this.$goToRoute('PodcastAndMusic', {chosenFeature: item.name}); break;
-                    case 'Music/Sound': this.$goToRoute('PodcastAndMusic', {chosenFeature: item.name}); break;
+                    case 'Podcast': this.$goToRoute('PodcastAndMusic'); this.setChosenFeature(item.name); break;
+                    case 'Music/Sound': this.$goToRoute('PodcastAndMusic'); this.setChosenFeature(item.name); break;
                     case 'Pomodoro': this.$goToRoute('Pomodoro'); break;
                     default: console.log('Error message');
                 }
@@ -40,6 +44,5 @@ import vNavigationButton from "../../components/vNavigationButton.vue"
     display: flex;
     flex-direction: column;
     gap: 24px;
-    
 }
 </style>

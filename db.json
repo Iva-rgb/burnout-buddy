@@ -8,5 +8,45 @@
       "memberships": null,
       "id": 1626123446020
     }
-  ]
+  ],
+  "podcastPlaylist": [
+    {
+      "title": "Ailee_暫別我的愛(demo)",
+      "image": "podcastBackgroundImage.jpg",
+      "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/Ailee_暫別我的愛(demo).mp3",
+      "category": "Education"
+    },
+    {
+      "title": "Aimer_Ninelie(demo)",
+      "image": "podcastBackgroundImage.jpg",
+      "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/Aimer_Ninelie(demo).mp3",
+      "category": "History"
+    },
+    {
+      "title": "BAAD_好想大聲叫喜歡你(demo)",
+      "image": "podcastBackgroundImage.jpg",
+      "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/BAAD_好想大聲叫喜歡你(demo).mp3",
+      "category": "Sport"
+    }
+  ],
+  "musicPlaylist": [
+    {
+      "title": "I NEED U(piano)(demo)",
+      "image": "musicImage.jpg",
+      "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/I NEED U(piano)(demo).mp3",
+      "category": "Techno"
+    },
+    {
+      "title": "Ian_By My Side(demo)",
+      "image": "musicImage.jpg",
+      "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/Ian_By My Side(demo).mp3",
+      "category": "House"
+    },
+    {
+      "title": "Brian Crain_Wind(demo)",
+      "image": "musicImage.jpg",
+      "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/Brian Crain_Wind(demo).mp3",
+      "category": "Country"
+    }
+  ] 
 }

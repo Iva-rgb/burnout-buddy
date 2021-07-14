@@ -22,7 +22,8 @@
     "vue-router": "^3.2.0",
     "vue-sidebar-menu": "^5.0.0",
     "vue-toast-notification": "^0.6.2",
-    "vuex": "^3.4.0"
+    "vuex": "^3.4.0",
+    "w-audioplayer-vue": "^2.0.3"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
