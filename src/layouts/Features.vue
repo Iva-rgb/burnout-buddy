@@ -20,7 +20,7 @@
     position: relative;
     top: 32px;
     left: 32px;
-    color: #023047;
+    color: hsl(101, 56%, 50%);
     cursor: pointer;
     transform: scale(2.5, 2.5);
 }

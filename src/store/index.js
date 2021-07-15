@@ -14,7 +14,7 @@ export default new Vuex.Store({
     },
     SET_LOGGED_IN_USER(state, user) {
       state.loggedInUser = user;
-    }
+    },
   },
   actions: {
     setChosenFeature(context, feature) {
@@ -22,8 +22,13 @@ export default new Vuex.Store({
     },
     setLoggedInUser(context, user) {
       context.commit('SET_LOGGED_IN_USER', user)
-    }
+    },
   },
   modules: {
   },
+  getters: {
+    loggedInUser: state => {
+      return state.loggedInUser;
+    }
+  }
 })

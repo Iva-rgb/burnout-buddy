@@ -4,16 +4,12 @@
       "username": "Sarah",
       "email": "sarahconor@gmail.com",
       "password": "terminator",
-      "group": {},
-      "memberships": null,
       "id": 1626123446020
     },
     {
       "username": "Matej",
       "email": "matej@gmail.com",
       "password": "matej",
-      "group": {},
-      "memberships": null,
       "id": 1626297263542
     }
   ],
@@ -55,6 +51,16 @@
       "image": "musicImage.jpg",
       "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/Brian Crain_Wind(demo).mp3",
       "category": "Country"
+    }
+  ],
+  "groups": [
+    {
+      "title": "Raise awareness",
+      "image": "selfHelp.jpg",
+      "category": "Environment",
+      "owner": "Sarah",
+      "status": 1,
+      "id": 1626361609918
     }
   ]
 }

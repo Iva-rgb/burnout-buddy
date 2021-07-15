@@ -65,6 +65,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
     export default {
         name: 'Register',
         data() {
@@ -73,13 +74,15 @@
                     username: '',
                     email: '',
                     password: '',
-                    group: {},
                     memberships: null,
                 },
                 confirmPassword: '',
             }
         },
         methods: {
+            ...mapActions({
+                setLoggedInUser: 'setLoggedInUser'
+            }),
             register() {
                 if(this.confirmPassword != this.newUser.password){
                     this.$toast.error('The passwords you entered do not match.');
@@ -87,7 +90,8 @@
                     this.newUser.id = Date.now();
 
                     try {
-                        this.$http.post("http://localhost:3000/users", this.newUser).then(response => console.log(response));
+                        this.$http.post("http://localhost:3000/users", this.newUser);
+                        this.setLoggedInUser(this.newUser);
                         this.$toast.success('Your new account has been registered.')
                         this.$goToRoute('Dashboard');
                     } catch (err) {

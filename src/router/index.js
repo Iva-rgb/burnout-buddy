@@ -10,13 +10,13 @@ import PodcastAndMusic from '../views/features/PodcastAndMusic.vue'
 import Pomodoro from '../views/features/Pomodoro.vue'
 import Profile from '../views/features/Profile.vue'
 import AudioPlayer from '../views/features/AudioPlayer.vue'
+import CreateGroup from '../views/features/CreateGroup.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    alias: '/login',
+    path: '/login',
     component: Entry,
     children: [
       {
@@ -27,7 +27,8 @@ const routes = [
     ],
   },
   {
-    path: '/register',
+    path: '/',
+    alias: '/register',
     component: Entry,
     children: [
       {
@@ -78,6 +79,11 @@ const routes = [
     name: 'AudioPlayer',
     path: '/player',
     component: AudioPlayer,
+  },
+  {
+    name: 'CreateGroup',
+    path: '/create',
+    component: CreateGroup,
   },
 ]
 

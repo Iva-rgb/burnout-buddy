@@ -56,7 +56,7 @@
   height: 100%;
   width: 300px;
   color: #fff;
-  background: #ade194;
+  background: hsl(101, 56%, 50%);
   transition: all ease 0.4s;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .profile-btn:hover{
-    color: #fef0ae;
+    color: hsl(101, 56%, 20%);
 }
 
 .site-menubar .log-out-btn{
@@ -117,7 +117,7 @@
     border-color: white;
     font-weight: bold;
     font-size: 1.4em;
-    color: #ade194;
+    color: hsl(101, 56%, 50%);
 }
 
 .site-menu a,

@@ -9,7 +9,8 @@
                     <h5>{{cardDetails.title}}</h5>
                     <p>{{cardDetails.category}}</p>
                 </div>
-                <span class="play-icon" @click="$emit('playAudio', {name: cardDetails.url, url: encodeURI(cardDetails.url)})"><i class="fas fa-play"></i></span>
+                <span v-if="cardDetails.url" class="play-icon" @click="$emit('playAudio', {name: cardDetails.url, url: encodeURI(cardDetails.url)})"><i class="fas fa-play"></i></span>
+                <span v-else class="message-icon" @click="$emit('openChat', {status: cardDetails.status})"><i class="fas fa-comment"></i></span>
             </div>
         </div>
     </div>
@@ -51,7 +52,8 @@
 .card-wrapper .card-details{
     padding: 16px 0;
 }
-.card-details .fa-play{
+.card-details .fa-play,
+.card-details .fa-comment{
     transform: scale(2, 2);
     position: relative;
     left: 400px;

@@ -12,6 +12,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 // Components
 import vInput from './components/vInput.vue';
+import vRadioButtons from './components/vRadioButtons.vue';
 import VueToast from 'vue-toast-notification';
 import 'vue-toast-notification/dist/theme-sugar.css';
 import { ValidationProvider, ValidationObserver, extend, localize } from 'vee-validate';
@@ -33,6 +34,7 @@ localize('en', en);
 
 const components = {
   vInput,
+  vRadioButtons,
   ValidationProvider,
   ValidationObserver,
   WAudioplayerVue,
