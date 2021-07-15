@@ -32,10 +32,10 @@ export default {
         this.$toast.error(err.response);
       }
     },
-    openChat(status) {
-      if (status) {
+    openChat(group) {
+      if (group.status) {
         this.$toast.info(
-          `This group is private. To enter you need to receive an invite from ${this.$store.getters.loggedInUser.username}`,
+          `This group is private. To enter you need to receive an invitation.`,
           {
             duration: 5000,
           }
