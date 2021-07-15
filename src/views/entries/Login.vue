@@ -43,6 +43,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
     export default {
         name: 'Login',
         data() {
@@ -52,8 +53,24 @@
             }
         },
         methods: {
+            ...mapActions({
+                setLoggedInUser: 'setLoggedInUser'
+            }),
             login() {
-                console.log('login');
+                try {
+                    this.$http.get(`http://localhost:3000/users?username=${this.username}&password=${this.password}`)
+                    .then(response => {
+                        if(response.data.length > 0){
+                            this.setLoggedInUser(response.data[0]);
+                            this.$goToRoute('Dashboard');
+                            this.$toast.success('Login successful.')
+                        } else{
+                            this.$toast.error('You have entered an invalid username or password.')
+                        }
+                    }); 
+                } catch (err) {
+                    this.$toast.error(err.response)
+                }
             },
         },
         mounted () {

@@ -83,19 +83,13 @@
             register() {
                 if(this.confirmPassword != this.newUser.password){
                     this.$toast.error('The passwords you entered do not match.');
-                    // try {
-                    //     this.$http.get("http://localhost:3000/users?username=henlo")
-                    //     .then(response => console.log(response.data)); // returns empty array if the user is not found
-                    //     this.$toast.success('Your new account has been registered.')
-                    // } catch (err) {
-                    //     this.$toast.error(err.response)
-                    // }
                 } else {
                     this.newUser.id = Date.now();
 
                     try {
                         this.$http.post("http://localhost:3000/users", this.newUser).then(response => console.log(response));
                         this.$toast.success('Your new account has been registered.')
+                        this.$goToRoute('Dashboard');
                     } catch (err) {
                         this.$toast.error(err.response)
                     }

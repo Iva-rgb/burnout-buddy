@@ -7,6 +7,14 @@
       "group": {},
       "memberships": null,
       "id": 1626123446020
+    },
+    {
+      "username": "Matej",
+      "email": "matej@gmail.com",
+      "password": "matej",
+      "group": {},
+      "memberships": null,
+      "id": 1626297263542
     }
   ],
   "podcastPlaylist": [
@@ -48,5 +56,5 @@
       "url": "https://cdn.jsdelivr.net/npm/w-demores@1.0.2/res/audio/Brian Crain_Wind(demo).mp3",
       "category": "Country"
     }
-  ] 
+  ]
 }

@@ -22,7 +22,7 @@ import vCard from "../../components/vCard.vue"
             getPlaylist(chosenFeature) {
                 const playlist = chosenFeature == "Podcast" ? 'podcastPlaylist' : 'musicPlaylist';
                 try {
-                    this.$http.get(`http://localhost:3000/${playlist}?username=henlo`)
+                    this.$http.get(`http://localhost:3000/${playlist}`)
                     .then(response => this.playlist = response.data); 
                 } catch (err) {
                     this.$toast.error(err.response)
