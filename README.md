@@ -1,4 +1,4 @@
-# burnout-helper-prototype
+# burnout-buddy-prototype
 
 ## Project setup
 ```
